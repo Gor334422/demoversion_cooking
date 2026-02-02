@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cooking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="buttons" class="navbar">
+    <a href="recipes.html?home=true">
+      <button>Recipes</button>
+    </a>
+    <a href="courses.html?home=true">
+      <button>Courses</button>
+    </a>
+    <a href="shop.html?home=true">
+      <button>Shop</button>
+    </a>
+    <a href="index.html?home=true">
+      <button>Home</button>
+    </a>
+    <a href="aboutus.html?home=true">
+      <button>About us</button>
+    </a>
+    <a href="login.html?home=true">
+      <button id="login">Login</button>
+    </a>
+    <a href="signup.html?home=true">
+      <button id="signup">Sign Up</button>
+    </a>
+  </div>
+  <div class="login-container">
+    <h2>Login to your account</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <div class="options">
+        <label><input type="checkbox" id="remember"> Remember me</label>
+        <a href="#">Forgot password?</a>
+      </div>
+      <br>
+      <button type="submit" onclick="saveName()" onclick="window.location.href='account.html?home=true'">Login</button>
+
+      <div class="social-login">
+        <p>Or login with:</p>
+        <button type="button" class="google">Google</button><!--To enable Google Login, go to the Console, create a Client ID, and register the redirect URI.-->
+        <br><br>
+        <button type="button" class="facebook">Facebook</button></button><!--To enable Google Login, go to the Console, create a Client ID, and register the redirect URI.-->
+      </div>
+      <p><a href="signup.html?home=true">
+          <button>Create a new account</button>
+        </a></p>
+    </form>
+    <p id="message"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

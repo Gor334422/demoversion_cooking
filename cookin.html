@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8">
+  <title>Cooking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main-layout">
+    
+    <!-- Ձախ՝ ֆիլտրեր -->
+    <aside class="sidebar">
+      <div class="filters">
+        <div class="filter-group">
+          <label>
+            <input type="checkbox" id="type-all" checked>
+            Ֆիլտրեր ըստ տեսակի
+          </label>
+        </div>
+        <div class="filter-group left">
+          <label><input type="checkbox" class="type-filter" value="նախուտեստներ" checked> Նախուտեստներ</label><br>
+          <label><input type="checkbox" class="type-filter" value="խմիչքներ" checked> Խմիչքներ</label><br>
+          <label><input type="checkbox" class="type-filter" value="աղցաններ" checked> Աղցաններ</label><br>
+          <label><input type="checkbox" class="type-filter" value="տաքուտեստներ" checked> Տաքուտեստներ</label>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Աջ՝ նավիգացիա + քարտեր -->
+    <main class="content">
+      <!-- Նավիգացիա -->
+      <nav>
+        <a href="index.html">Գլխավոր</a>
+        <a href="cookin.html">Բաղադրատոմսեր</a>
+        <a href="aboutus.html">Մեր մասին</a>
+        <a href="contact.html">Կապ</a>
+      </nav>
+
+      <!-- Քարտերի կոնտեյներ -->
+      <div id="card-container" class="card-container">
+        <!-- Քարտ 1 -->
+        <div class="card">
+          <a href="recipe1.html">
+            <img src="images/food/kesar_axcan.png" alt="Աղցան">
+          </a>
+          <div class="card-content">
+            <h3>Թարմ աղցան</h3>
+            <p>Համեղ և թեթև աղցան՝ ամենօրյա օգտագործման համար։</p>
+            <a href="recipe1.html" class="btn green">Կարդալ ավելին</a>
+          </div>
+        </div>
+
+        <!-- Քարտ 2 -->
+        <div class="card">
+          <a href="recipe2.html">
+            <img src="images/food/cocktail.jpg" alt="Խմիչք">
+          </a>
+          <div class="card-content">
+            <h3>Սառը խմիչք</h3>
+            <p>Թարմացնող խմիչք՝ ամառային օրերի համար։</p>
+            <a href="recipe2.html" class="btn green">Կարդալ ավելին</a>
+          </div>
+        </div>
+
+        <!-- Քարտ 3 -->
+        <div class="card">
+          <img src="kartini/eda/snack.jpg" alt="Նախուտեստ">
+          <div class="card-content">
+            <h3>Նախուտեստ</h3>
+            <p>Արագ և համեղ նախուտեստ։</p>
+            <a href="recipe3.html" class="btn green">Կարդալ ավելին</a>
+          </div>
+        </div>
+
+        <!-- Կարող ես ավելացնել մնացած քարտերը նույն ձևով -->
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
