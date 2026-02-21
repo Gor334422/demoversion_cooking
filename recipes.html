@@ -1,32 +1,191 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Cooking</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Рецепты — Кулинарный Класс</title>
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
-    <div id="buttons" class="navbar">
-      <a href="recipes.html?home=true">
-      <button>Recipes</button>
-      </a>
-      <a href="courses.html?home=true">
-      <button>Courses</button>
-      </a>
-      <a href="shop.html?home=true">
-      <button>Shop</button>
-      </a>
-      <a href="aboutus.html?home=true">
-      <button>About us</button>
-      </a>
-      <a href="login.html?home=true">
-      <button id="login">Login</button>
-      </a>
-      <a href="signup.html?home=true">
-      <button id="signup">Sign Up</button>
-      </a>
-    </div>
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="navbar-brand">🍳 Кулинарный Класс</div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="recipes.html" class="active">Рецепты</a></li>
+        <li><a href="courses.html">Курсы</a></li>
+        <li><a href="shop.html">Магазин</a></li>
+        <li><a href="contact.html">Контакты</a></li>
+        <li><a href="login.html" class="btn-login">Войти</a></li>
+      </ul>
+      <div class="hamburger" aria-hidden="true"><span></span><span></span><span></span></div>
+    </nav>
+  </header>
 
-  <script src="script.js"></script>
+  <main class="container">
+    <section class="page-header">
+      <h1>Рецепты</h1>
+      <p class="lead">Найдите вкусное блюдо по ингредиентам, времени и категории.</p>
+    </section>
+
+    <section class="recipes-controls" style="margin-top:1rem;">
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
+        <input id="searchInput" type="search" placeholder="Поиск по названию или ингредиентам" style="flex:1;padding:0.6rem;border:1px solid #e6e6e6;border-radius:6px;">
+        <div class="filters">
+          <button class="btn filter-btn" data-filter="all">Все</button>
+          <button class="btn filter-btn" data-filter="appetizer">Закуски</button>
+          <button class="btn filter-btn" data-filter="main">Основные</button>
+          <button class="btn filter-btn" data-filter="dessert">Десерты</button>
+          <button class="btn filter-btn" data-filter="drink">Напитки</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-recipes">
+      <div class="recipe-grid" id="recipeGrid">
+        <article class="recipe-card" data-category="main" data-title="Толма">
+          <div class="recipe-image"><img src="images/food/recipe1.jpg" alt="Толма"></div>
+          <div class="recipe-info">
+            <h3>Толма</h3>
+            <p class="description">Традиционные голубцы с нежной начинкой.</p>
+            <div class="recipe-meta">
+              <span>45 мин</span>
+              <a href="recipe-dolma.html" class="btn btn-secondary">Подробнее</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="recipe-card" data-category="main" data-title="Шашлык">
+          <div class="recipe-image"><img src="images/food/recipe2.jpg" alt="Шашлык"></div>
+          <div class="recipe-info">
+            <h3>Шашлык</h3>
+            <p class="description">Сочный шашлык на углях — идеален для пикника.</p>
+            <div class="recipe-meta">
+              <span>60 мин</span>
+              <a href="recipe-shashlik.html" class="btn btn-secondary">Подробнее</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="recipe-card" data-category="main" data-title="Хинкали">
+          <div class="recipe-image"><img src="images/food/recipe3.jpg" alt="Хинкали"></div>
+          <div class="recipe-info">
+            <h3>Хинкали</h3>
+            <p class="description">Большие грузинские пельмени с ароматной начинкой.</p>
+            <div class="recipe-meta">
+              <span>90 мин</span>
+              <a href="recipe-khinkali.html" class="btn btn-secondary">Подробнее</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="recipe-card" data-category="appetizer" data-title="Салат Винегрет">
+          <div class="recipe-image"><img src="images/food/recipe4.jpg" alt="Салат"></div>
+          <div class="recipe-info">
+            <h3>Салат Винегрет</h3>
+            <p class="description">Яркий овощной салат — быстро и полезно.</p>
+            <div class="recipe-meta">
+              <span>20 мин</span>
+              <a href="#" class="btn btn-secondary">Подробнее</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="recipe-card" data-category="dessert" data-title="Гата">
+          <div class="recipe-image"><img src="images/food/recipe5.jpg" alt="Десерт"></div>
+          <div class="recipe-info">
+            <h3>Гата</h3>
+            <p class="description">Сладкая выпечка с ароматом ванили — традиционный десерт.</p>
+            <div class="recipe-meta">
+              <span>50 мин</span>
+              <a href="#" class="btn btn-secondary">Подробнее</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="recipe-card" data-category="drink" data-title="Лимонад">
+          <div class="recipe-image"><img src="images/food/recipe6.jpg" alt="Лимонад"></div>
+          <div class="recipe-info">
+            <h3>Домашний лимонад</h3>
+            <p class="description">Освежающий напиток для летнего дня.</p>
+            <div class="recipe-meta">
+              <span>10 мин</span>
+              <a href="#" class="btn btn-secondary">Подробнее</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="recipe-card" data-category="main" data-title="Хашлама">
+          <div class="recipe-image"><img src="images/food/recipe7.jpg" alt="Хашлама"></div>
+          <div class="recipe-info">
+            <h3>Хашлама</h3>
+            <p class="description">Сытное рагу из мяса и овощей.</p>
+            <div class="recipe-meta">
+              <span>75 мин</span>
+              <a href="#" class="btn btn-secondary">Подробнее</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="recipe-card" data-category="dessert" data-title="Чурчхела">
+          <div class="recipe-image"><img src="images/food/recipe8.jpg" alt="Чурчхела"></div>
+          <div class="recipe-info">
+            <h3>Чурчхела</h3>
+            <p class="description">Национальная сладость с орехами и виноградным сиропом.</p>
+            <div class="recipe-meta">
+              <span>60 мин</span>
+              <a href="#" class="btn btn-secondary">Подробнее</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="section-footer">
+        <p class="muted">Показано 8 из 50+ рецептов. Добавьте свои через панель администратора.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <p>&copy; 2024 Кулинарный Класс. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Локальная фильтрация и поиск (быстрое решение)
+    (function(){
+      const buttons = document.querySelectorAll('.filter-btn');
+      const cards = Array.from(document.querySelectorAll('.recipe-card'));
+      const search = document.getElementById('searchInput');
+
+      function applyFilter(filter){
+        cards.forEach(card=>{
+          const cat = card.dataset.category || '';
+          const title = (card.dataset.title || '').toLowerCase();
+          const query = (search.value || '').toLowerCase();
+          const matchFilter = (filter==='all') || (cat===filter);
+          const matchQuery = !query || title.includes(query) || card.textContent.toLowerCase().includes(query);
+          card.style.display = (matchFilter && matchQuery) ? '' : 'none';
+        });
+      }
+
+      buttons.forEach(b=> b.addEventListener('click', ()=>{
+        buttons.forEach(x=>x.classList.remove('active'));
+        b.classList.add('active');
+        applyFilter(b.dataset.filter);
+      }));
+
+      search.addEventListener('input', ()=>{
+        const active = document.querySelector('.filter-btn.active');
+        const filter = active ? active.dataset.filter : 'all';
+        applyFilter(filter);
+      });
+
+      // set default active
+      const defaultBtn = document.querySelector('.filter-btn[data-filter="all"]');
+      if(defaultBtn) defaultBtn.classList.add('active');
+    })();
+  </script>
 </body>
 </html>

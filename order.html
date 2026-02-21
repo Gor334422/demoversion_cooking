@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Оформление заказа — Кулинарный Класс</title>
+  <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+  <main class="container">
+    <h1>Оформление заказа</h1>
+    <p id="pkgDesc">Загрузка...</p>
+
+    <form id="orderForm" method="post" action="order.php">
+      <input type="hidden" name="package" id="packageInput">
+      <label>Имя
+        <input name="customer_name" type="text" required>
+      </label>
+      <label>Email
+        <input name="customer_email" type="email" required>
+      </label>
+      <label>Адрес (опционально)
+        <input name="customer_address" type="text">
+      </label>
+      <div style="margin-top:.6rem;">
+        <button class="btn btn-primary" type="submit">Оплатить и Подтвердить</button>
+        <a href="index.html" class="btn btn-secondary">Отмена</a>
+      </div>
+    </form>
+
+  <script>
+    // read package from querystring
+    const params = new URLSearchParams(location.search);
+    const pkg = params.get('package') || 'starter';
+    const packages = {
+      starter: {title:'Старт', price:5, desc:'Доступ к эксклюзивным рецептам (базовый набор).'},
+      popular: {title:'Популярный', price:9, desc:'Видео-курсы, 10% скидка в магазине.'},
+      premium: {title:'Премиум', price:20, desc:'Персональные рекомендации, до 25% скидки и мастер-классы.'}
+    };
+    const p = packages[pkg] || packages.starter;
+    document.getElementById('pkgDesc').innerHTML = `<strong>${p.title}</strong> — ${p.desc} <br><strong>Цена: $${p.price}/мес</strong>`;
+    document.getElementById('packageInput').value = pkg;
+  </script>
+</body>
+</html>

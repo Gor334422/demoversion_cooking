@@ -1,61 +1,84 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Cooking</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Вход — Кулинарный Класс</title>
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
 
 <body>
-  <div id="buttons" class="navbar">
-    <a href="recipes.html?home=true">
-      <button>Recipes</button>
-    </a>
-    <a href="courses.html?home=true">
-      <button>Courses</button>
-    </a>
-    <a href="shop.html?home=true">
-      <button>Shop</button>
-    </a>
-    <a href="index.html?home=true">
-      <button>Home</button>
-    </a>
-    <a href="aboutus.html?home=true">
-      <button>About us</button>
-    </a>
-    <a href="login.html?home=true">
-      <button id="login">Login</button>
-    </a>
-    <a href="signup.html?home=true">
-      <button id="signup">Sign Up</button>
-    </a>
-  </div>
-  <div class="login-container">
-    <h2>Login to your account</h2>
-    <form id="loginForm">
-      <input type="text" id="username" placeholder="Username" required>
-      <input type="password" id="password" placeholder="Password" required>
-      <div class="options">
-        <label><input type="checkbox" id="remember"> Remember me</label>
-        <a href="#">Forgot password?</a>
-      </div>
-      <br>
-      <button type="submit" onclick="saveName()" onclick="window.location.href='account.html?home=true'">Login</button>
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="navbar-brand">🍳 Кулинарный Класс</div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="recipes.html">Рецепты</a></li>
+        <li><a href="courses.html">Курсы</a></li>
+        <li><a href="shop.html">Магазин</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      <div class="social-login">
-        <p>Or login with:</p>
-        <button type="button" class="google">Google</button><!--To enable Google Login, go to the Console, create a Client ID, and register the redirect URI.-->
-        <br><br>
-        <button type="button" class="facebook">Facebook</button></button><!--To enable Google Login, go to the Console, create a Client ID, and register the redirect URI.-->
+  <main class="container">
+    <section class="auth-section">
+      <div class="auth-card login-card">
+        <h2>Вход в аккаунт</h2>
+        <form id="loginForm">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="email@example.com" required>
+
+          <label for="password">Пароль</label>
+          <input id="password" type="password" placeholder="Введите пароль" required>
+
+          <div class="form-row options">
+            <label><input type="checkbox" id="remember"> Запомнить меня</label>
+            <a href="contact.html" class="muted">Забыли пароль?</a>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Войти</button>
+            <a href="signup.html" class="btn btn-secondary">Создать аккаунт</a>
+          </div>
+        </form>
+
+        <div class="social-login muted">
+          <p>Войти через:</p>
+          <button type="button" class="google">Google</button>
+          <button type="button" class="facebook">Facebook</button>
+        </div>
+        <p id="message" class="muted"></p>
       </div>
-      <p><a href="signup.html?home=true">
-          <button>Create a new account</button>
-        </a></p>
-    </form>
-    <p id="message"></p>
-  </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <p>&copy; 2024 Кулинарный Класс.</p>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      const pass = document.getElementById('password').value;
+      if(!email || !pass){
+        document.getElementById('message').textContent = 'Пожалуйста, заполните все поля.';
+        return;
+      }
+      // Быстрая демонстрационная логика: сохраняем имя и email в localStorage и переходим в кабинет
+      localStorage.setItem('userName', email.split('@')[0] || 'Пользователь');
+      localStorage.setItem('userEmail', email);
+      // Опционально: remember
+      if(document.getElementById('remember').checked){
+        localStorage.setItem('remember', '1');
+      } else {
+        localStorage.removeItem('remember');
+      }
+      window.location.href = 'account.html';
+    });
+  </script>
 </body>
-
 </html>

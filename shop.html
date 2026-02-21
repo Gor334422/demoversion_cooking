@@ -1,32 +1,52 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Cooking</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Магазин — Кулинарный Класс</title>
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
-    <div id="buttons" class="navbar">
-      <a href="recipes.html?home=true">
-      <button>Recipes</button>
-      </a>
-      <a href="courses.html?home=true">
-      <button>Courses</button>
-      </a>
-      <a href="shop.html?home=true">
-      <button>Shop</button>
-      </a>
-      <a href="aboutus.html?home=true">
-      <button>About us</button>
-      </a>
-      <a href="login.html?home=true">
-      <button id="login">Login</button>
-      </a>
-      <a href="signup.html?home=true">
-      <button id="signup">Sign Up</button>
-      </a>
+  <main class="container">
+    <h1>Магазин и Подписки</h1>
+    <p>Выберите пакет подписки или купите отдельные товары.</p>
+
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Старт</h3>
+        <div class="price">$5 <span>/ мес</span></div>
+        <ul>
+          <li>Доступ к эксклюзивным рецептам (базовый набор)</li>
+          <li>Еженедельная рассылка</li>
+        </ul>
+        <a href="order.html?package=starter" class="btn btn-primary">Купить за $5</a>
+      </div>
+
+      <div class="pricing-card recommended">
+        <h3>Популярный</h3>
+        <div class="price">$9 <span>/ мес</span></div>
+        <ul>
+          <li>Видео-курсы</li>
+          <li>10% скидка в магазине</li>
+        </ul>
+        <a href="order.html?package=popular" class="btn btn-primary">Купить за $9</a>
+      </div>
+
+      <div class="pricing-card">
+        <h3>Премиум</h3>
+        <div class="price">$20 <span>/ мес</span></div>
+        <ul>
+          <li>Персональные рекомендации</li>
+          <li>Доступ к мастер-классам</li>
+        </ul>
+        <a href="order.html?package=premium" class="btn btn-primary">Купить за $20</a>
+      </div>
     </div>
 
+    <p style="margin-top:1rem;">Если хотите продавать сайт, я могу подготовить упаковку: установка на сервер покупателя, смена паролей и краткая инструкция — это повысит цену при продаже.</p>
+
+    <p><a href="index.html">← Вернуться на главную</a></p>
+  </main>
   <script src="script.js"></script>
 </body>
 </html>
