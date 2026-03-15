@@ -23,11 +23,11 @@ $timestamp = time();
 $filename = "users/{$timestamp}_{$base}.html";
 
 // basic HTML user page template
-$html = "<!doctype html>\n<html lang=\"ru\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>Профиль пользователя - " . htmlspecialchars($name, ENT_QUOTES) . "</title>\n  <link rel=\"stylesheet\" href=\"../style.css?v=2\">\n</head>\n<body>\n  <main class=\"container\">\n    <section class=\"profile\">\n      <h1>" . htmlspecialchars($name, ENT_QUOTES) . "</h1>\n      <p>Email: " . htmlspecialchars($email, ENT_QUOTES) . "</p>\n      <p>Это автоматически сгенерированная страница профиля (демо).</p>\n      <p><a href=\"../account.html\">Вернуться в аккаунт</a></p>\n    </section>\n  </main>\n</body>\n</html>";
+$html = "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <title>User Profile - " . htmlspecialchars($name, ENT_QUOTES) . "</title>\n  <link rel=\"stylesheet\" href=\"../style.css?v=2\">\n</head>\n<body>\n  <main class=\"container\">\n    <section class=\"profile\">\n      <h1>" . htmlspecialchars($name, ENT_QUOTES) . "</h1>\n      <p>Email: " . htmlspecialchars($email, ENT_QUOTES) . "</p>\n      <p>This is an automatically generated profile page (demo).</p>\n      <p><a href=\"../account.html\">Back to account</a></p>\n    </section>\n  </main>\n</body>\n</html>";
 
 // attempt to write file
 if (file_put_contents(__DIR__ . DIRECTORY_SEPARATOR . $filename, $html) === false) {
-    echo json_encode(['success' => false, 'error' => 'Не удалось записать файл']);
+    echo json_encode(['success' => false, 'error' => 'Failed to write file']);
     exit;
 }
 

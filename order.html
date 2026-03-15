@@ -1,30 +1,30 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Оформление заказа — Кулинарный Класс</title>
+  <title>Order Checkout — Culinary Class</title>
   <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
   <main class="container">
-    <h1>Оформление заказа</h1>
-    <p id="pkgDesc">Загрузка...</p>
+    <h1>Order Checkout</h1>
+    <p id="pkgDesc">Loading...</p>
 
     <form id="orderForm" method="post" action="order.php">
       <input type="hidden" name="package" id="packageInput">
-      <label>Имя
+      <label>Name
         <input name="customer_name" type="text" required>
       </label>
       <label>Email
         <input name="customer_email" type="email" required>
       </label>
-      <label>Адрес (опционально)
+      <label>Address (optional)
         <input name="customer_address" type="text">
       </label>
       <div style="margin-top:.6rem;">
-        <button class="btn btn-primary" type="submit">Оплатить и Подтвердить</button>
-        <a href="index.html" class="btn btn-secondary">Отмена</a>
+        <button class="btn btn-primary" type="submit">Pay and Confirm</button>
+        <a href="index.html" class="btn btn-secondary">Cancel</a>
       </div>
     </form>
 
@@ -33,12 +33,12 @@
     const params = new URLSearchParams(location.search);
     const pkg = params.get('package') || 'starter';
     const packages = {
-      starter: {title:'Старт', price:5, desc:'Доступ к эксклюзивным рецептам (базовый набор).'},
-      popular: {title:'Популярный', price:9, desc:'Видео-курсы, 10% скидка в магазине.'},
-      premium: {title:'Премиум', price:20, desc:'Персональные рекомендации, до 25% скидки и мастер-классы.'}
+      starter: {title:'Starter', price:5, desc:'Access to exclusive recipes (basic set).'},
+      popular: {title:'Popular', price:9, desc:'Video courses, 10% discount in the shop.'},
+      premium: {title:'Premium', price:20, desc:'Personal recommendations, up to 25% discounts and master classes.'}
     };
     const p = packages[pkg] || packages.starter;
-    document.getElementById('pkgDesc').innerHTML = `<strong>${p.title}</strong> — ${p.desc} <br><strong>Цена: $${p.price}/мес</strong>`;
+    document.getElementById('pkgDesc').innerHTML = `<strong>${p.title}</strong> — ${p.desc} <br><strong>Price: $${p.price}/month</strong>`;
     document.getElementById('packageInput').value = pkg;
   </script>
 </body>

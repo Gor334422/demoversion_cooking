@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Рецепты — Кулинарный Класс</title>
+  <title>Recipes — Culinary Class</title>
   <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
   <header class="site-header">
     <nav class="navbar">
-      <div class="navbar-brand">🍳 Кулинарный Класс</div>
+      <div class="navbar-brand">🍳 Culinary Class</div>
       <ul class="nav-menu">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="recipes.html" class="active">Рецепты</a></li>
-        <li><a href="courses.html">Курсы</a></li>
-        <li><a href="shop.html">Магазин</a></li>
-        <li><a href="contact.html">Контакты</a></li>
-        <li><a href="login.html" class="btn-login">Войти</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html" class="active">Recipes</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" class="btn-login">Sign In</a></li>
       </ul>
       <div class="hamburger" aria-hidden="true"><span></span><span></span><span></span></div>
     </nav>
@@ -24,136 +24,136 @@
 
   <main class="container">
     <section class="page-header">
-      <h1>Рецепты</h1>
-      <p class="lead">Найдите вкусное блюдо по ингредиентам, времени и категории.</p>
+      <h1>Recipes</h1>
+      <p class="lead">Find a delicious dish by ingredients, time and category.</p>
     </section>
 
     <section class="recipes-controls" style="margin-top:1rem;">
       <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
-        <input id="searchInput" type="search" placeholder="Поиск по названию или ингредиентам" style="flex:1;padding:0.6rem;border:1px solid #e6e6e6;border-radius:6px;">
+        <input id="searchInput" type="search" placeholder="Search by name or ingredients" style="flex:1;padding:0.6rem;border:1px solid #e6e6e6;border-radius:6px;">
         <div class="filters">
-          <button class="btn filter-btn" data-filter="all">Все</button>
-          <button class="btn filter-btn" data-filter="appetizer">Закуски</button>
-          <button class="btn filter-btn" data-filter="main">Основные</button>
-          <button class="btn filter-btn" data-filter="dessert">Десерты</button>
-          <button class="btn filter-btn" data-filter="drink">Напитки</button>
+          <button class="btn filter-btn" data-filter="all">All</button>
+          <button class="btn filter-btn" data-filter="appetizer">Appetizers</button>
+          <button class="btn filter-btn" data-filter="main">Main</button>
+          <button class="btn filter-btn" data-filter="dessert">Desserts</button>
+          <button class="btn filter-btn" data-filter="drink">Drinks</button>
         </div>
       </div>
     </section>
 
     <section class="featured-recipes">
       <div class="recipe-grid" id="recipeGrid">
-        <article class="recipe-card" data-category="main" data-title="Толма">
-          <div class="recipe-image"><img src="images/food/recipe1.jpg" alt="Толма"></div>
+        <article class="recipe-card" data-category="main" data-title="Tolma">
+          <div class="recipe-image"><img src="images/food/recipe1.jpg" alt="Tolma"></div>
           <div class="recipe-info">
-            <h3>Толма</h3>
-            <p class="description">Традиционные голубцы с нежной начинкой.</p>
+            <h3>Tolma</h3>
+            <p class="description">Traditional cabbage rolls with tender filling.</p>
             <div class="recipe-meta">
-              <span>45 мин</span>
-              <a href="recipe-dolma.html" class="btn btn-secondary">Подробнее</a>
+              <span>45 min</span>
+              <a href="recipe-dolma.html" class="btn btn-secondary">More details</a>
             </div>
           </div>
         </article>
 
-        <article class="recipe-card" data-category="main" data-title="Шашлык">
-          <div class="recipe-image"><img src="images/food/recipe2.jpg" alt="Шашлык"></div>
+        <article class="recipe-card" data-category="main" data-title="Shashlik">
+          <div class="recipe-image"><img src="images/food/recipe2.jpg" alt="Shashlik"></div>
           <div class="recipe-info">
-            <h3>Шашлык</h3>
-            <p class="description">Сочный шашлык на углях — идеален для пикника.</p>
+            <h3>Shashlik</h3>
+            <p class="description">Juicy shashlik on coals — perfect for a picnic.</p>
             <div class="recipe-meta">
-              <span>60 мин</span>
-              <a href="recipe-shashlik.html" class="btn btn-secondary">Подробнее</a>
+              <span>60 min</span>
+              <a href="recipe-shashlik.html" class="btn btn-secondary">More details</a>
             </div>
           </div>
         </article>
 
-        <article class="recipe-card" data-category="main" data-title="Хинкали">
-          <div class="recipe-image"><img src="images/food/recipe3.jpg" alt="Хинкали"></div>
+        <article class="recipe-card" data-category="main" data-title="Khinkali">
+          <div class="recipe-image"><img src="images/food/recipe3.jpg" alt="Khinkali"></div>
           <div class="recipe-info">
-            <h3>Хинкали</h3>
-            <p class="description">Большие грузинские пельмени с ароматной начинкой.</p>
+            <h3>Khinkali</h3>
+            <p class="description">Large Georgian dumplings with aromatic filling.</p>
             <div class="recipe-meta">
-              <span>90 мин</span>
-              <a href="recipe-khinkali.html" class="btn btn-secondary">Подробнее</a>
+              <span>90 min</span>
+              <a href="recipe-khinkali.html" class="btn btn-secondary">More details</a>
             </div>
           </div>
         </article>
 
-        <article class="recipe-card" data-category="appetizer" data-title="Салат Винегрет">
-          <div class="recipe-image"><img src="images/food/recipe4.jpg" alt="Салат"></div>
+        <article class="recipe-card" data-category="appetizer" data-title="Vinaigrette Salad">
+          <div class="recipe-image"><img src="images/food/recipe4.jpg" alt="Salad"></div>
           <div class="recipe-info">
-            <h3>Салат Винегрет</h3>
-            <p class="description">Яркий овощной салат — быстро и полезно.</p>
+            <h3>Vinaigrette Salad</h3>
+            <p class="description">Bright vegetable salad — quick and healthy.</p>
             <div class="recipe-meta">
-              <span>20 мин</span>
-              <a href="#" class="btn btn-secondary">Подробнее</a>
+              <span>20 min</span>
+              <a href="#" class="btn btn-secondary">More details</a>
             </div>
           </div>
         </article>
 
-        <article class="recipe-card" data-category="dessert" data-title="Гата">
-          <div class="recipe-image"><img src="images/food/recipe5.jpg" alt="Десерт"></div>
+        <article class="recipe-card" data-category="dessert" data-title="Gata">
+          <div class="recipe-image"><img src="images/food/recipe5.jpg" alt="Dessert"></div>
           <div class="recipe-info">
-            <h3>Гата</h3>
-            <p class="description">Сладкая выпечка с ароматом ванили — традиционный десерт.</p>
+            <h3>Gata</h3>
+            <p class="description">Sweet pastry with vanilla aroma — traditional dessert.</p>
             <div class="recipe-meta">
-              <span>50 мин</span>
-              <a href="#" class="btn btn-secondary">Подробнее</a>
+              <span>50 min</span>
+              <a href="#" class="btn btn-secondary">More details</a>
             </div>
           </div>
         </article>
 
-        <article class="recipe-card" data-category="drink" data-title="Лимонад">
-          <div class="recipe-image"><img src="images/food/recipe6.jpg" alt="Лимонад"></div>
+        <article class="recipe-card" data-category="drink" data-title="Lemonade">
+          <div class="recipe-image"><img src="images/food/recipe6.jpg" alt="Lemonade"></div>
           <div class="recipe-info">
-            <h3>Домашний лимонад</h3>
-            <p class="description">Освежающий напиток для летнего дня.</p>
+            <h3>Homemade Lemonade</h3>
+            <p class="description">Refreshing drink for a summer day.</p>
             <div class="recipe-meta">
-              <span>10 мин</span>
-              <a href="#" class="btn btn-secondary">Подробнее</a>
+              <span>10 min</span>
+              <a href="#" class="btn btn-secondary">More details</a>
             </div>
           </div>
         </article>
 
-        <article class="recipe-card" data-category="main" data-title="Хашлама">
-          <div class="recipe-image"><img src="images/food/recipe7.jpg" alt="Хашлама"></div>
+        <article class="recipe-card" data-category="main" data-title="Khashlama">
+          <div class="recipe-image"><img src="images/food/recipe7.jpg" alt="Khashlama"></div>
           <div class="recipe-info">
-            <h3>Хашлама</h3>
-            <p class="description">Сытное рагу из мяса и овощей.</p>
+            <h3>Khashlama</h3>
+            <p class="description">Hearty meat and vegetable stew.</p>
             <div class="recipe-meta">
-              <span>75 мин</span>
-              <a href="#" class="btn btn-secondary">Подробнее</a>
+              <span>75 min</span>
+              <a href="#" class="btn btn-secondary">More details</a>
             </div>
           </div>
         </article>
 
-        <article class="recipe-card" data-category="dessert" data-title="Чурчхела">
-          <div class="recipe-image"><img src="images/food/recipe8.jpg" alt="Чурчхела"></div>
+        <article class="recipe-card" data-category="dessert" data-title="Churchkhela">
+          <div class="recipe-image"><img src="images/food/recipe8.jpg" alt="Churchkhela"></div>
           <div class="recipe-info">
-            <h3>Чурчхела</h3>
-            <p class="description">Национальная сладость с орехами и виноградным сиропом.</p>
+            <h3>Churchkhela</h3>
+            <p class="description">National sweet with nuts and grape syrup.</p>
             <div class="recipe-meta">
-              <span>60 мин</span>
-              <a href="#" class="btn btn-secondary">Подробнее</a>
+              <span>60 min</span>
+              <a href="#" class="btn btn-secondary">More details</a>
             </div>
           </div>
         </article>
       </div>
 
       <div class="section-footer">
-        <p class="muted">Показано 8 из 50+ рецептов. Добавьте свои через панель администратора.</p>
+        <p class="muted">Showing 8 of 50+ recipes. Add yours through the admin panel.</p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-bottom">
-      <p>&copy; 2024 Кулинарный Класс. Все права защищены.</p>
+      <p>&copy; 2024 Culinary Class. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
-    // Локальная фильтрация и поиск (быстрое решение)
+    // Local filtering and search (quick solution)
     (function(){
       const buttons = document.querySelectorAll('.filter-btn');
       const cards = Array.from(document.querySelectorAll('.recipe-card'));

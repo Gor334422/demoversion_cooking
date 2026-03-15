@@ -1,24 +1,30 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Кулинарный Класс - Рецепты и Онлайн Курсы</title>
+  <meta name="description" content="Culinary Class - Learn cooking online with professional chefs. Explore recipes, courses, and ingredient shop.">
+  <meta name="keywords" content="recipes, cooking, culinary courses, food, shop, Armenian cuisine, online cooking classes">
+  <title>Culinary Class | Home of Recipes & Courses</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- HEADER & NAVIGATION -->
   <header class="site-header">
     <nav class="navbar">
-      <div class="navbar-brand">🍳 Кулинарный Класс</div>
-      <ul class="nav-menu">
-        <li><a href="index.html" class="active">Главная</a></li>
-        <li><a href="recipes.html">Рецепты</a></li>
-        <li><a href="courses.html">Курсы</a></li>
-        <li><a href="shop.html">Магазин</a></li>
-        <li><a href="contact.html">Контакты</a></li>
-        <li><a href="login.html" class="btn-login">Вход</a></li>
-      </ul>
+      <div class="navbar-brand">🍳 Culinary Class</div>
+      <div class="nav-container">
+        <ul class="nav-menu">
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html" class="btn-login">Sign In</a></li>
+        </ul>
+        <a href="account.html" class="nav-avatar" id="navAvatar" title="Go to Account">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff7043'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Ccircle cx='12' cy='9' r='3'/%3E%3Cpath d='M 8 18 Q 8 14 12 14 Q 16 14 16 18'/%3E%3C/svg%3E" alt="User Avatar" id="avatarImg">
+        </a>
+      </div>
       <div class="hamburger">
         <span></span>
         <span></span>
@@ -28,9 +34,9 @@
 
     <!-- HERO SECTION -->
     <div class="hero-section">
-      <h1>Мастерство Кулинарии</h1>
-      <p>Откройте Тайны Вкуса - Учитесь у Профессионалов</p>
-      <a href="recipes.html" class="btn btn-primary">Исследовать Рецепты</a>
+      <h1>Culinary Mastery</h1>
+      <p>Unlock the Secrets of Flavor - Learn from Professionals</p>
+      <a href="recipes.html" class="btn btn-primary">Explore Recipes</a>
     </div>
   </header>
 
@@ -38,237 +44,237 @@
   <section class="slider-section">
     <div class="slider">
       <div class="slide active">
-        <img src="images/food/khashlama.jpg" alt="Хашлама">
-        <div class="slide-text">Традиционные блюда</div>
+        <img src="images/food/khashlama.jpg" alt="Khashlama">
+        <div class="slide-text">Traditional dishes</div>
       </div>
       <div class="slide">
-        <img src="images/food/shashlik.png" alt="Шашлык">
-        <div class="slide-text">Мясные деликатесы</div>
+        <img src="images/food/shashlik.png" alt="Shashlik">
+        <div class="slide-text">Meat delicacies</div>
       </div>
       <div class="slide">
-        <img src="images/food/xinkali.png" alt="Хинкали">
-        <div class="slide-text">Национальные напевы</div>
+        <img src="images/food/xinkali.png" alt="Khinkali">
+        <div class="slide-text">National delicacies</div>
       </div>
       <div class="slide">
-        <img src="images/food/harisa.jpg" alt="Хариса">
-        <div class="slide-text">Праздничные блюда</div>
+        <img src="images/food/harisa.jpg" alt="Harisa">
+        <div class="slide-text">Festive dishes</div>
       </div>
       <div class="slide">
-        <img src="images/food/ghapama.jpg" alt="Ғапама">
-        <div class="slide-text">Сладкие шедевры</div>
+        <img src="images/food/ghapama.jpg" alt="Ghapama">
+        <div class="slide-text">Sweet masterpieces</div>
       </div>
 
-      <button id="prevBtn" class="slider-btn prev">❮</button>
-      <button id="nextBtn" class="slider-btn next">❯</button>
+      <button id="prevBtn" class="slider-btn prev"></button>
+      <button id="nextBtn" class="slider-btn next"></button>
       <div class="dots" id="dots"></div>
     </div>
   </section>
 
   <!-- FEATURED RECIPES SECTION -->
   <section class="featured-recipes">
-    <h2>Избранные Рецепты</h2>
-    <p class="section-subtitle">Самые популярные и любимые блюда наших читателей</p>
+    <h2>Featured Recipes</h2>
+    <p class="section-subtitle">The most popular and beloved dishes from our readers</p>
     <div class="recipe-grid">
       <div class="recipe-card">
         <div class="recipe-image">
-          <img src="images/food/tolma.jpg" alt="Толма">
+          <img src="images/food/tolma.jpg" alt="Tolma">
           <div class="recipe-overlay">
-            <a href="recipe-dolma.html" class="btn">Полный Рецепт</a>
+            <a href="recipe-dolma.html" class="btn">Full Recipe</a>
           </div>
         </div>
         <div class="recipe-info">
-          <h3>Толма</h3>
-          <p class="description">Традиционные голубцы из виноградных листьев с пикантной начинкой.</p>
+          <h3>Tolma</h3>
+          <p class="description">Traditional grape leaf rolls with savory filling.</p>
           <div class="recipe-meta">
-            <span class="time">⏱️ 45 мин</span>
-            <span class="difficulty">⭐⭐ Средняя</span>
+            <span class="time">⏱️ 45 min</span>
+            <span class="difficulty">⭐⭐ Medium</span>
           </div>
         </div>
       </div>
 
       <div class="recipe-card">
         <div class="recipe-image">
-          <img src="images/food/shashlik.png" alt="Шашлык">
+          <img src="images/food/shashlik.png" alt="Shashlik">
           <div class="recipe-overlay">
-            <a href="recipe-shashlik.html" class="btn">Полный Рецепт</a>
+            <a href="recipe-shashlik.html" class="btn">Full Recipe</a>
           </div>
         </div>
         <div class="recipe-info">
-          <h3>Шашлык</h3>
-          <p class="description">Сочное мясо, маринованное с специями и запеченное на углях.</p>
+          <h3>Shashlik</h3>
+          <p class="description">Juicy meat marinated with spices and grilled over charcoal.</p>
           <div class="recipe-meta">
-            <span class="time">⏱️ 60 мин</span>
-            <span class="difficulty">⭐⭐ Средняя</span>
+            <span class="time">⏱️ 60 min</span>
+            <span class="difficulty">⭐⭐ Medium</span>
           </div>
         </div>
       </div>
 
       <div class="recipe-card">
         <div class="recipe-image">
-          <img src="images/food/xinkali.png" alt="Хинкали">
+          <img src="images/food/xinkali.png" alt="Khinkali">
           <div class="recipe-overlay">
-            <a href="recipe-khinkali.html" class="btn">Полный Рецепт</a>
+            <a href="recipe-khinkali.html" class="btn">Full Recipe</a>
           </div>
         </div>
         <div class="recipe-info">
-          <h3>Хинкали</h3>
-          <p class="description">Деликатные клёцки с сочной мясной начинкой - настоящее чудо кухни.</p>
+          <h3>Khinkali</h3>
+          <p class="description">Delicate dumplings with juicy meat filling - a true culinary masterpiece.</p>
           <div class="recipe-meta">
-            <span class="time">⏱️ 90 мин</span>
-            <span class="difficulty">⭐⭐⭐ Высокая</span>
+            <span class="time">⏱️ 90 min</span>
+            <span class="difficulty">⭐⭐⭐ Advanced</span>
           </div>
         </div>
       </div>
     </div>
     <div class="section-footer">
-      <a href="recipes.html" class="btn btn-secondary">Смотреть Все Рецепты →</a>
+      <a href="recipes.html" class="btn btn-secondary">View All Recipes →</a>
     </div>
   </section>
 
   <!-- CATEGORIES SECTION -->
   <section class="categories-section">
-    <h2>Категории Рецептов</h2>
+    <h2>Recipe Categories</h2>
     <div class="categories-grid">
       <div class="category-card" onclick="filterRecipes('appetizers')">
         <div class="category-icon">🥗</div>
-        <h3>Закуски</h3>
-        <p>50+ рецептов</p>
+        <h3>Appetizers</h3>
+        <p>50+ recipes</p>
       </div>
       <div class="category-card" onclick="filterRecipes('main')">
         <div class="category-icon">🍖</div>
-        <h3>Основные Блюда</h3>
-        <p>120+ рецептов</p>
+        <h3>Main Courses</h3>
+        <p>120+ recipes</p>
       </div>
       <div class="category-card" onclick="filterRecipes('desserts')">
         <div class="category-icon">🍰</div>
-        <h3>Десерты</h3>
-        <p>85+ рецептов</p>
+        <h3>Desserts</h3>
+        <p>85+ recipes</p>
       </div>
       <div class="category-card" onclick="filterRecipes('drinks')">
         <div class="category-icon">🍷</div>
-        <h3>Напитки</h3>
-        <p>60+ рецептов</p>
+        <h3>Beverages</h3>
+        <p>60+ recipes</p>
       </div>
     </div>
   </section>
 
   <!-- WHY CHOOSE US SECTION -->
   <section class="why-us-section">
-    <h2>Почему Выбирают Нас?</h2>
+    <h2>Why Choose Us?</h2>
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon">👨‍🍳</div>
-        <h3>Опытные Шефы</h3>
-        <p>Рецепты от профессиональных поваров с 20+ летним опытом</p>
+        <h3>Expert Chefs</h3>
+        <p>Recipes from professional chefs with 20+ years of experience</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">✅</div>
-        <h3>Проверенные Рецепты</h3>
-        <p>Каждый рецепт тестируется и одобряется нашей командой</p>
+        <h3>Tested Recipes</h3>
+        <p>Every recipe is tested and approved by our team</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">📱</div>
-        <h3>Мобильный Дизайн</h3>
-        <p>Удобство использования на любом устройстве</p>
+        <h3>Mobile Design</h3>
+        <p>Easy to use on any device</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🎓</div>
-        <h3>Онлайн Курсы</h3>
-        <p>Учитесь готовить под руководством профессионалов</p>
+        <h3>Online Courses</h3>
+        <p>Learn to cook under professional guidance</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🛒</div>
-        <h3>Интегрированный Магазин</h3>
-        <p>Доставка ингредиентов прямо к вам домой</p>
+        <h3>Integrated Shop</h3>
+        <p>Ingredient delivery right to your home</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🔔</div>
-        <h3>Еженедельные Рецепты</h3>
-        <p>Получайте новые рецепты каждую неделю в подписке</p>
+        <h3>Weekly Recipes</h3>
+        <p>Get new recipes every week with our subscription</p>
       </div>
     </div>
   </section>
 
   <!-- PRICING / PACKAGES -->
   <section class="pricing-section" id="pricing">
-    <h2>Пакеты Подписки (месяц)</h2>
-    <p class="section-subtitle">Выберите подходящий пакет и получите доступ к эксклюзивным рецептам, скидкам и курсам.</p>
+    <h2>Subscription Plans (Monthly)</h2>
+    <p class="section-subtitle">Choose the right plan and get access to exclusive recipes, discounts, and courses.</p>
     <div class="pricing-grid">
       <div class="pricing-card">
-        <h3>Старт</h3>
-        <div class="price">$5 <span>/ мес</span></div>
+        <h3>Starter</h3>
+        <div class="price">$5 <span>/ mo</span></div>
         <ul>
-          <li>Доступ к эксклюзивным рецептам (базовый набор)</li>
-          <li>Еженедельная рассылка</li>
-          <li>5% скидка в магазине</li>
+          <li>Access to exclusive recipes (basic collection)</li>
+          <li>Weekly newsletter</li>
+          <li>5% discount in the shop</li>
         </ul>
-        <a href="order.html?package=starter" class="btn btn-primary">Купить за $5</a>
+        <a href="order.html?package=starter" class="btn btn-primary">Buy for $5</a>
       </div>
 
       <div class="pricing-card recommended">
-        <h3>Популярный</h3>
-        <div class="price">$9 <span>/ мес</span></div>
-        <div class="tag">Скидка!</div>
+        <h3>Popular</h3>
+        <div class="price">$9 <span>/ mo</span></div>
+        <div class="tag">Special Offer!</div>
         <ul>
-          <li>Все из пакета «Старт»</li>
-          <li>Доступ к видео-курсам</li>
-          <li>10% скидка в магазине</li>
-          <li>Ежемесячный плейлист рецептов</li>
+          <li>Everything from Starter plan</li>
+          <li>Access to video courses</li>
+          <li>10% discount in the shop</li>
+          <li>Monthly recipe playlist</li>
         </ul>
-        <a href="order.html?package=popular" class="btn btn-primary">Купить за $9</a>
+        <a href="order.html?package=popular" class="btn btn-primary">Buy for $9</a>
       </div>
 
       <div class="pricing-card">
-        <h3>Премиум</h3>
-        <div class="price">$20 <span>/ мес</span></div>
+        <h3>Premium</h3>
+        <div class="price">$20 <span>/ mo</span></div>
         <ul>
-          <li>Все из «Популярный»</li>
-          <li>Персональные рекомендации и приоритет поддержки</li>
-          <li>До 25% скидки на выбранные товары</li>
-          <li>Доступ к закрытым мастер-классам</li>
+          <li>Everything from Popular plan</li>
+          <li>Personal recommendations and priority support</li>
+          <li>Up to 25% discount on selected items</li>
+          <li>Access to exclusive masterclasses</li>
         </ul>
-        <a href="order.html?package=premium" class="btn btn-primary">Купить за $20</a>
+        <a href="order.html?package=premium" class="btn btn-primary">Buy for $20</a>
       </div>
     </div>
-    <p class="muted">Пакеты повышают ценность сайта при продаже — их можно включать в коммерческие предложения.</p>
+    <p class="muted">Plans increase website value - they can be included in commercial offers.</p>
   </section>
 
   <!-- TESTIMONIALS SECTION -->
   <section class="testimonials-section">
-    <h2>Отзывы Наших Пользователей</h2>
+    <h2>Customer Reviews</h2>
     <div class="testimonials-grid">
       <div class="testimonial-card">
         <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p>"Благодаря этому сайту я научилась готовить как настоящий шеф! Все рецепты простые и вкусные."</p>
+        <p>"Thanks to this website, I learned to cook like a real chef! All recipes are simple and delicious."</p>
         <div class="testimonial-author">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff7043'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3C/svg%3E" alt="Аватар">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff7043'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3C/svg%3E" alt="Avatar">
           <div>
-            <strong>Мария К.</strong>
-            <p>Санкт-Петербург</p>
+            <strong>Maria K.</strong>
+            <p>Saint Petersburg</p>
           </div>
         </div>
       </div>
 
       <div class="testimonial-card">
         <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p>"Отличные онлайн курсы! Преподаватели очень внимательны и всегда помогают. Рекомендую всем!"</p>
+        <p>"Excellent online courses! The instructors are very attentive and always helpful. Highly recommended!"</p>
         <div class="testimonial-author">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff7043'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3C/svg%3E" alt="Аватар">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff7043'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3C/svg%3E" alt="Avatar">
           <div>
-            <strong>Иван П.</strong>
-            <p>Москва</p>
+            <strong>Ivan P.</strong>
+            <p>Moscow</p>
           </div>
         </div>
       </div>
 
       <div class="testimonial-card">
         <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p>"Магазин с ингредиентами - просто находка! Всё доставляют быстро и в отличном качестве."</p>
+        <p>"The ingredient shop is a real gem! Everything is delivered quickly and in excellent condition."</p>
         <div class="testimonial-author">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff7043'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3C/svg%3E" alt="Аватар">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff7043'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3C/svg%3E" alt="Avatar">
           <div>
-            <strong>Елена В.</strong>
-            <p>Казань</p>
+            <strong>Elena V.</strong>
+            <p>Kazan</p>
           </div>
         </div>
       </div>
@@ -277,11 +283,11 @@
 
   <!-- CTA SECTION -->
   <section class="cta-section">
-    <h2>Начните Ваше Кулинарное Путешествие Сегодня</h2>
-    <p>Присоединитесь к нашему сообществу и получайте эксклюзивные рецепты и советы</p>
+    <h2>Start Your Culinary Journey Today</h2>
+    <p>Join our community and get exclusive recipes and tips</p>
     <div class="cta-buttons">
-      <a href="courses.html" class="btn btn-primary">Посмотреть Курсы</a>
-      <a href="signup.html" class="btn btn-secondary">Создать Аккаунт</a>
+      <a href="courses.html" class="btn btn-primary">View Courses</a>
+      <a href="signup.html" class="btn btn-secondary">Create Account</a>
     </div>
   </section>
 
@@ -289,31 +295,31 @@
   <footer class="site-footer">
     <div class="footer-content">
       <div class="footer-section">
-        <h4>О Сайте</h4>
+        <h4>About</h4>
         <ul>
-          <li><a href="aboutus.html">О Нас</a></li>
-          <li><a href="#">Блог</a></li>
-          <li><a href="#">Карьера</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
         </ul>
       </div>
       <div class="footer-section">
-        <h4>Категории</h4>
+        <h4>Categories</h4>
         <ul>
-          <li><a href="recipes.html">Все Рецепты</a></li>
-          <li><a href="courses.html">Курсы</a></li>
-          <li><a href="shop.html">Магазин</a></li>
+          <li><a href="recipes.html">All Recipes</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="shop.html">Shop</a></li>
         </ul>
       </div>
       <div class="footer-section">
-        <h4>Служба Поддержки</h4>
+        <h4>Support</h4>
         <ul>
-          <li><a href="contact.html">Контакты</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
           <li><a href="#">FAQ</a></li>
-          <li><a href="#">Политика Конфиденциальности</a></li>
+          <li><a href="#">Privacy Policy</a></li>
         </ul>
       </div>
       <div class="footer-section">
-        <h4>Следите за Нами</h4>
+        <h4>Follow Us</h4>
         <div class="social-links">
           <a href="#" class="social-icon">f</a>
           <a href="#" class="social-icon">🐦</a>
@@ -322,7 +328,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2024 Кулинарный Класс. Все права защищены.</p>
+      <p>&copy; 2024 Culinary Class. All rights reserved.</p>
     </div>
   </footer>
 

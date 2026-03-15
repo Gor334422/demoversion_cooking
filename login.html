@@ -1,49 +1,70 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Вход — Кулинарный Класс</title>
+  <title>Login — Culinary Class</title>
   <link rel="stylesheet" href="style.css?v=2">
 </head>
 
 <body>
   <header class="site-header">
     <nav class="navbar">
-      <div class="navbar-brand">🍳 Кулинарный Класс</div>
-      <ul class="nav-menu">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="recipes.html">Рецепты</a></li>
-        <li><a href="courses.html">Курсы</a></li>
-        <li><a href="shop.html">Магазин</a></li>
-      </ul>
+      <div class="navbar-brand">🍳 Culinary Class</div>
+      <div class="nav-container">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="navbar-brand">
+        <a href="account.html" title="Go to Account">
+          <img src="images/logo.png" alt="Culinary Class Logo" class="logo">
+        </a>
+      </div>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
+
+    <!-- HERO SECTION -->
+    <div class="hero-section">
+      <h1>Login</h1>
+      <p>Your recipes, your success — welcome back.</p>
+      <a href="recipes.html" class="btn btn-primary">Explore Recipes</a>
+    </div>
   </header>
 
   <main class="container">
     <section class="auth-section">
       <div class="auth-card login-card">
-        <h2>Вход в аккаунт</h2>
+        <h2>Sign In to Account</h2>
         <form id="loginForm">
           <label for="email">Email</label>
           <input id="email" type="email" placeholder="email@example.com" required>
 
-          <label for="password">Пароль</label>
-          <input id="password" type="password" placeholder="Введите пароль" required>
+          <label for="password">Password</label>
+          <input id="password" type="password" placeholder="Enter password" required>
 
           <div class="form-row options">
-            <label><input type="checkbox" id="remember"> Запомнить меня</label>
-            <a href="contact.html" class="muted">Забыли пароль?</a>
+            <label><input type="checkbox" id="remember"> Remember me</label>
+            <a href="contact.html" class="muted">Forgot password?</a>
           </div>
 
           <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Войти</button>
-            <a href="signup.html" class="btn btn-secondary">Создать аккаунт</a>
+            <button type="submit" class="btn btn-primary">Sign In</button>
+            <a href="signup.html" class="btn btn-secondary">Create Account</a>
           </div>
         </form>
 
         <div class="social-login muted">
-          <p>Войти через:</p>
+          <p>Sign in with:</p>
           <button type="button" class="google">Google</button>
           <button type="button" class="facebook">Facebook</button>
         </div>
@@ -54,7 +75,7 @@
 
   <footer class="site-footer">
     <div class="footer-bottom">
-      <p>&copy; 2024 Кулинарный Класс.</p>
+      <p>&copy; 2024 Culinary Class.</p>
     </div>
   </footer>
 
@@ -65,13 +86,13 @@
       const email = document.getElementById('email').value.trim();
       const pass = document.getElementById('password').value;
       if(!email || !pass){
-        document.getElementById('message').textContent = 'Пожалуйста, заполните все поля.';
+        document.getElementById('message').textContent = 'Please fill in all fields.';
         return;
       }
-      // Быстрая демонстрационная логика: сохраняем имя и email в localStorage и переходим в кабинет
-      localStorage.setItem('userName', email.split('@')[0] || 'Пользователь');
+      // Quick demo logic: save name and email in localStorage and go to account
+      localStorage.setItem('userName', email.split('@')[0] || 'User');
       localStorage.setItem('userEmail', email);
-      // Опционально: remember
+      // Optional: remember
       if(document.getElementById('remember').checked){
         localStorage.setItem('remember', '1');
       } else {

@@ -396,3 +396,72 @@ if (legacyTypeFilters.length > 0) {
   legacyTypeFilters.forEach(cb => cb.addEventListener("change", renderLegacyCards));
   renderLegacyCards();
 }
+
+// ========== USER AVATAR / PROFILE MANAGEMENT ==========
+function initializeUserAvatar() {
+  const navAvatar = document.getElementById('navAvatar');
+  const avatarImg = document.getElementById('avatarImg');
+  
+  if (!navAvatar || !avatarImg) return;
+  
+  // Load avatar from localStorage
+  const savedAvatarData = localStorage.getItem('userAvatarData');
+  if (savedAvatarData) {
+    avatarImg.src = savedAvatarData;
+  }
+  
+  // Create a global function to sync avatars across pages
+  window.updateUserAvatar = function(imageData) {
+    if (imageData) {
+      localStorage.setItem('userAvatarData', imageData);
+      if (avatarImg) {
+        avatarImg.src = imageData;
+      }
+      // Notify all open tabs/windows about the update
+      localStorage.setItem('avatarUpdateTimestamp', Date.now().toString());
+    }
+  };
+  
+  // Listen for avatar updates from other tabs/windows
+  window.addEventListener('storage', function(e) {
+    if (e.key === 'userAvatarData' && e.newValue) {
+      if (avatarImg) {
+        avatarImg.src = e.newValue;
+      }
+    }
+  });
+}
+
+// ========== PERSIST USER DATA ==========
+function persistUserData() {
+  // Load stored user data
+  const userName = localStorage.getItem('userName');
+  const userEmail = localStorage.getItem('userEmail');
+  
+  if (userName) {
+    const userNameElement = document.getElementById('userName');
+    if (userNameElement) {
+      userNameElement.textContent = userName;
+    }
+  }
+  
+  if (userEmail) {
+    const userEmailElement = document.getElementById('userEmail');
+    if (userEmailElement) {
+      userEmailElement.textContent = userEmail;
+    }
+  }
+}
+
+// ========== INITIALIZE ALL (UPDATED) ==========
+document.addEventListener('DOMContentLoaded', () => {
+  initializeFilters();
+  initializeSearch();
+  initializeForms();
+  initializeMobileMenu();
+  initializeSmoothScroll();
+  initializeCart();
+  initializeUserAvatar();
+  persistUserData();
+  showSlider(0);
+});

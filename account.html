@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Мой Кабинет — Кулинарный Класс</title>
+  <title>My Account — Culinary Class</title>
   <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
   <header class="site-header">
     <nav class="navbar">
-      <div class="navbar-brand">🍳 Кулинарный Класс</div>
-      <ul class="nav-menu">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="recipes.html">Рецепты</a></li>
-        <li><a href="courses.html">Курсы</a></li>
-        <li><a href="shop.html">Магазин</a></li>
-        <li><a href="contact.html">Контакты</a></li>
-        <li><a href="login.html" class="btn-login">Войти</a></li>
-      </ul>
+      <div class="navbar-brand">🍳 Culinary Class</div>
+      <div class="nav-container">
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html" class="btn-login">Sign In</a></li>
+        </ul>
+        <a href="account.html" class="nav-avatar" id="navAvatar" title="Go to Account">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff7043'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Ccircle cx='12' cy='9' r='3'/%3E%3Cpath d='M 8 18 Q 8 14 12 14 Q 16 14 16 18'/%3E%3C/svg%3E" alt="User Avatar" id="avatarImg">
+        </a>
+      </div>
       <div class="hamburger" aria-hidden="true">
         <span></span><span></span><span></span>
       </div>
@@ -26,128 +31,130 @@
 
   <main class="container profile-page">
     <section class="page-header">
-      <h1>Мой кабинет</h1>
-      <p class="lead">Добро пожаловать. Управляйте своими данными, заказами и подписками.</p>
+      <h1>My Account</h1>
+      <p class="lead">Welcome! Manage your personal data, orders, and subscriptions.</p>
     </section>
 
     <div class="profile-grid">
       <aside class="profile-sidebar">
         <div class="profile-card">
-          <div class="avatar" aria-hidden="true">
-            <img src="images/nav/logo.png" alt="Аватар пользователя" />
+          <div class="avatar-upload" id="avatarUploadContainer">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff7043'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Ccircle cx='12' cy='9' r='3'/%3E%3Cpath d='M 8 18 Q 8 14 12 14 Q 16 14 16 18'/%3E%3C/svg%3E" alt="User Avatar" id="profileAvatarImg" class="avatar">
+            <input type="file" id="avatarInput" accept="image/*" style="display: none;">
+            <button type="button" id="changeAvatarBtn" class="btn btn-sm" style="margin-top: 10px;">Change Photo</button>
           </div>
-          <h2 id="userName">Имя Пользователя</h2>
+          <h2 id="userName">User Name</h2>
           <p class="muted" id="userEmail">email@example.com</p>
-          <p class="member-status">Уровень: <strong>Базовый</strong></p>
+          <p class="member-status">Level: <strong>Basic</strong></p>
           <div class="profile-actions">
-            <a href="#edit" class="btn btn-secondary">Редактировать профиль</a>
-            <button id="logoutBtn" class="btn btn-danger">Выйти</button>
+            <a href="#edit" class="btn btn-secondary">Edit Profile</a>
+            <button id="logoutBtn" class="btn btn-danger">Sign Out</button>
           </div>
         </div>
 
         <div class="profile-card stats">
-          <h3>Статистика</h3>
+          <h3>Statistics</h3>
           <ul>
-            <li>Заказы: <strong id="ordersCount">2</strong></li>
-            <li>Избранное: <strong id="favsCount">5</strong></li>
-            <li>Курсы: <strong id="coursesCount">1</strong></li>
+            <li>Orders: <strong id="ordersCount">2</strong></li>
+            <li>Favorites: <strong id="favsCount">5</strong></li>
+            <li>Courses: <strong id="coursesCount">1</strong></li>
           </ul>
         </div>
       </aside>
 
       <section class="profile-main">
         <div class="tabs">
-          <button class="tab active" data-tab="overview">Обзор</button>
-          <button class="tab" data-tab="orders">Заказы</button>
-          <button class="tab" data-tab="favorites">Избранное</button>
-          <button class="tab" data-tab="subscriptions">Подписки</button>
+          <button class="tab active" data-tab="overview">Overview</button>
+          <button class="tab" data-tab="orders">Orders</button>
+          <button class="tab" data-tab="favorites">Favorites</button>
+          <button class="tab" data-tab="subscriptions">Subscriptions</button>
         </div>
 
         <div class="tab-content" id="overview">
-          <h2>Привет, <span id="overviewName">Пользователь</span>!</h2>
-          <p>Здесь вы можете управлять своим аккаунтом, просматривать историю заказов и доступ к купленным курсам.</p>
+          <h2>Hello, <span id="overviewName">User</span>!</h2>
+          <p>Here you can manage your account, view your order history, and access purchased courses.</p>
           <div class="quick-links">
-            <a href="#orders" class="card-link">Мои заказы</a>
-            <a href="#favorites" class="card-link">Избранное</a>
-            <a href="#subscriptions" class="card-link">Мои курсы</a>
+            <a href="#orders" class="card-link">My Orders</a>
+            <a href="#favorites" class="card-link">Favorites</a>
+            <a href="#subscriptions" class="card-link">My Courses</a>
           </div>
         </div>
 
         <div class="tab-content hidden" id="orders">
-          <h2>История заказов</h2>
+          <h2>Order History</h2>
           <ul class="order-list">
             <li>
               <div class="order-meta">
-                <strong>Заказ #20240201</strong>
-                <span class="muted">— 12 фев 2024</span>
+                <strong>Order #20240201</strong>
+                <span class="muted">— Feb 12, 2024</span>
               </div>
-              <div class="order-status">Статус: <strong>Доставлен</strong></div>
-              <div class="order-items">Содержит: Специи, Масло</div>
+              <div class="order-status">Status: <strong>Delivered</strong></div>
+              <div class="order-items">Contains: Spices, Oil</div>
             </li>
             <li>
               <div class="order-meta">
-                <strong>Заказ #20240115</strong>
-                <span class="muted">— 15 янв 2024</span>
+                <strong>Order #20240115</strong>
+                <span class="muted">— Jan 15, 2024</span>
               </div>
-              <div class="order-status">Статус: <strong>В обработке</strong></div>
-              <div class="order-items">Содержит: Набор ножей</div>
+              <div class="order-status">Status: <strong>Processing</strong></div>
+              <div class="order-items">Contains: Knife Set</div>
             </li>
           </ul>
         </div>
 
         <div class="tab-content hidden" id="favorites">
-          <h2>Избранные рецепты</h2>
+          <h2>Favorite Recipes</h2>
           <div class="favorites-grid">
             <a class="fav-card" href="recipe-dolma.html">
-              <img src="images/food/recipe1.jpg" alt="Толма">
+              <img src="images/food/recipe1.jpg" alt="Tolma">
               <div class="fav-meta">
-                <h4>Толма</h4>
-                <p class="muted">45 мин • Средняя</p>
+                <h4>Tolma</h4>
+                <p class="muted">45 min • Medium</p>
               </div>
             </a>
             <a class="fav-card" href="recipe-shashlik.html">
-              <img src="images/food/recipe2.jpg" alt="Шашлык">
+              <img src="images/food/recipe2.jpg" alt="Shashlik">
               <div class="fav-meta">
-                <h4>Шашлык</h4>
-                <p class="muted">60 мин • Средняя</p>
+                <h4>Shashlik</h4>
+                <p class="muted">60 min • Medium</p>
               </div>
             </a>
           </div>
         </div>
 
         <div class="tab-content hidden" id="subscriptions">
-          <h2>Подписки и курсы</h2>
+          <h2>Subscriptions and Courses</h2>
           <div class="subscriptions">
             <div class="sub-item">
-              <h4>Курс: Мастерство Гриля</h4>
-              <p class="muted">Статус: Доступен</p>
-              <a href="courses.html" class="btn btn-primary">Перейти к курсу</a>
+              <h4>Course: Grill Mastery</h4>
+              <p class="muted">Status: Available</p>
+              <a href="courses.html" class="btn btn-primary">Go to Course</a>
             </div>
           </div>
         </div>
 
         <div class="profile-card" id="edit">
-          <h3>Редактировать профиль</h3>
+          <h3>Edit Profile</h3>
           <form id="accountForm">
             <div class="form-row">
-              <label for="fullName">ФИО</label>
-              <input id="fullName" name="fullName" type="text" placeholder="Иван Иванов" required>
+              <label for="fullName">Full Name</label>
+              <input id="fullName" name="fullName" type="text" placeholder="John Doe" required>
             </div>
             <div class="form-row">
               <label for="email">Email</label>
               <input id="email" name="email" type="email" placeholder="email@example.com" required>
             </div>
             <div class="form-row">
-              <label for="phone">Телефон</label>
-              <input id="phone" name="phone" type="tel" placeholder="+7 (495) 000-00-00">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" placeholder="+1 (555) 000-0000">
             </div>
             <div class="form-row">
-              <label for="address">Адрес</label>
-              <input id="address" name="address" type="text" placeholder="Город, улица, дом">
+              <label for="address">Address</label>
+              <input id="address" name="address" type="text" placeholder="City, Street, Number">
             </div>
             <div class="form-actions">
-              <button type="submit" class="btn btn-primary">Сохранить</button>
-              <button type="button" id="cancelEdit" class="btn btn-secondary">Отмена</button>
+              <button type="submit" class="btn btn-primary">Save Changes</button>
+              <button type="button" id="cancelEdit" class="btn btn-secondary">Cancel</button>
             </div>
           </form>
         </div>
@@ -157,42 +164,115 @@
 
   <footer class="site-footer">
     <div class="footer-bottom">
-      <p>&copy; 2024 Кулинарный Класс. Все права защищены.</p>
+      <p>&copy; 2024 Culinary Class. All rights reserved.</p>
     </div>
   </footer>
 
   <script src="script.js"></script>
   <script>
-    // Небольшая логика вкладок и кнопки выхода
+    // Tab functionality, avatar upload, and account management
     document.addEventListener('DOMContentLoaded', function(){
+      // Initialize tabs
       const tabs = document.querySelectorAll('.tab');
       const contents = document.querySelectorAll('.tab-content');
-      tabs.forEach(t=> t.addEventListener('click', ()=>{
-        tabs.forEach(x=>x.classList.remove('active'));
+      tabs.forEach(t => t.addEventListener('click', () => {
+        tabs.forEach(x => x.classList.remove('active'));
         t.classList.add('active');
         const id = t.getAttribute('data-tab');
-        contents.forEach(c=> c.classList.toggle('hidden', c.id!==id));
+        contents.forEach(c => c.classList.toggle('hidden', c.id !== id));
       }));
 
-      document.getElementById('logoutBtn')?.addEventListener('click', ()=>{
-        // Простейшая заглушка выхода
-        alert('Вы вышли из аккаунта');
-        window.location.href = 'index.html';
+      // Load user data from localStorage
+      const userName = localStorage.getItem('userName') || 'User';
+      const userEmail = localStorage.getItem('userEmail') || 'email@example.com';
+      
+      document.getElementById('userName').textContent = userName;
+      document.getElementById('userEmail').textContent = userEmail;
+      document.getElementById('overviewName').textContent = userName;
+      document.getElementById('fullName').value = userName;
+      document.getElementById('email').value = userEmail;
+
+      // Load avatar from localStorage
+      const profileAvatarImg = document.getElementById('profileAvatarImg');
+      const savedAvatarData = localStorage.getItem('userAvatarData');
+      if (savedAvatarData && profileAvatarImg) {
+        profileAvatarImg.src = savedAvatarData;
+      }
+
+      // Avatar upload functionality
+      const changeAvatarBtn = document.getElementById('changeAvatarBtn');
+      const avatarInput = document.getElementById('avatarInput');
+      const navAvatar = document.getElementById('navAvatar');
+      const avatarImg = document.getElementById('avatarImg');
+
+      if (changeAvatarBtn && avatarInput) {
+        changeAvatarBtn.addEventListener('click', () => {
+          avatarInput.click();
+        });
+
+        avatarInput.addEventListener('change', function(e) {
+          const file = e.target.files[0];
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = function(event) {
+              const imageData = event.target.result;
+              
+              // Save to localStorage
+              localStorage.setItem('userAvatarData', imageData);
+              
+              // Update profile avatar
+              if (profileAvatarImg) {
+                profileAvatarImg.src = imageData;
+              }
+              
+              // Update navigation avatar
+              if (avatarImg) {
+                avatarImg.src = imageData;
+              }
+              
+              // Trigger global update function if available
+              if (window.updateUserAvatar) {
+                window.updateUserAvatar(imageData);
+              }
+              
+              alert('Profile photo updated successfully!');
+            };
+            reader.readAsDataURL(file);
+          }
+        });
+      }
+
+      // Sign out functionality
+      document.getElementById('logoutBtn')?.addEventListener('click', () => {
+        if (confirm('Are you sure you want to sign out?')) {
+          // Clear session data but keep avatar
+          localStorage.removeItem('userName');
+          localStorage.removeItem('userEmail');
+          alert('You have been signed out');
+          window.location.href = 'index.html';
+        }
       });
 
-      // Подгрузка тестовых данных (при необходимости заменить реальным)
-      document.getElementById('userName').textContent = localStorage.getItem('userName') || 'Иван Иванов';
-      document.getElementById('userEmail').textContent = localStorage.getItem('userEmail') || 'email@example.com';
-      document.getElementById('overviewName').textContent = document.getElementById('userName').textContent;
-
-      document.getElementById('accountForm')?.addEventListener('submit', function(e){
+      // Form submission for profile updates
+      document.getElementById('accountForm')?.addEventListener('submit', function(e) {
         e.preventDefault();
-        // Сохранить в localStorage (демо)
-        localStorage.setItem('userName', document.getElementById('fullName').value);
-        localStorage.setItem('userEmail', document.getElementById('email').value);
-        alert('Данные сохранены');
+        const fullName = document.getElementById('fullName').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const address = document.getElementById('address').value;
+        
+        // Save to localStorage
+        localStorage.setItem('userName', fullName);
+        localStorage.setItem('userEmail', email);
+        localStorage.setItem('userPhone', phone);
+        localStorage.setItem('userAddress', address);
+        
+        alert('Profile saved successfully!');
         location.reload();
       });
+
+      // Initialize user avatar system
+      initializeUserAvatar();
     });
   </script>
 </body>

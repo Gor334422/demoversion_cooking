@@ -1,128 +1,128 @@
-KУЛИНАРНЫЙ КЛАСС - ПРОЕКТ ЗАВЕРШЕН!
+CULINARY CLASS - PROJECT COMPLETED!
 
-=== СТАТИСТИКА ===
+=== STATISTICS ===
 
-Создано:
-✓ 14 HTML-страниц
-✓ 1600+ строк CSS
-✓ 200+ строк JavaScript
-✓ 8 файлов документации
-✓ 50+ изображений и иконок
+Created:
+✓ 14 HTML pages
+✓ 1600+ lines of CSS
+✓ 200+ lines of JavaScript
+✓ 8 documentation files
+✓ 50+ images and icons
 
-=== ОТКРЫТЬ САЙТ ===
+=== OPEN THE SITE ===
 
 http://localhost/demoversion_cooking/
 
-=== РАСПОЛОЖЕНИЕ ФАЙЛОВ ===
+=== FILE LOCATION ===
 
 c:\xampp\htdocs\demoversion_cooking\
 
-=== ДОКУМЕНТАЦИЯ ===
+=== DOCUMENTATION ===
 
-1. START_HERE.md - Начните отсюда!
-2. QUICK_START.md - Быстрый старт (5 мин)
-3. README.md - Полное описание
-4. GUIDE.md - Руководство администратора
-5. TESTING_CHECKLIST.md - Чеклист проверки
-6. PROJECT_SUMMARY.md - Итоговое резюме
-7. FILES_INVENTORY.md - Инвентарь всех файлов
-8. FINAL_REPORT.md - Финальный отчет
+1. START_HERE.md - Start here!
+2. QUICK_START.md - Quick start (5 min)
+3. README.md - Full description
+4. GUIDE.md - Administrator guide
+5. TESTING_CHECKLIST.md - Testing checklist
+6. PROJECT_SUMMARY.md - Final summary
+7. FILES_INVENTORY.md - Inventory of all files
+8. FINAL_REPORT.md - Final report
 
-=== СТРАНИЦЫ САЙТА ===
+=== SITE PAGES ===
 
-Главная:
-- index.html - Главная страница
+Main:
+- index.html - Home page
 
-Каталоги:
-- recipes.html - Рецепты
-- courses.html - Онлайн курсы
-- shop.html - Интернет магазин
+Catalogs:
+- recipes.html - Recipes
+- courses.html - Online courses
+- shop.html - Online shop
 
-Информация:
-- aboutus.html - О компании
-- contact.html - Контакты и FAQ
+Information:
+- aboutus.html - About the company
+- contact.html - Contacts and FAQ
 
-Аутентификация:
-- login.html - Вход
-- signup.html - Регистрация
+Authentication:
+- login.html - Login
+- signup.html - Registration
 
-Рецепты:
-- recipe-dolma.html - Толма
-- recipe-shashlik.html - Шашлык
-- recipe-khinkali.html - Хинкали
+Recipes:
+- recipe-dolma.html - Tolma
+- recipe-shashlik.html - Shashlik
+- recipe-khinkali.html - Khinkali
 
-=== ТЕХНОЛОГИИ ===
+=== TECHNOLOGIES ===
 
 HTML5 + CSS3 + JavaScript (Vanilla)
-Адаптивный дизайн (Mobile/Tablet/Desktop)
-Интерактивные элементы
-Полностью функционален
+Responsive design (Mobile/Tablet/Desktop)
+Interactive elements
+Fully functional
 
-=== СЛЕДУЮЩИЕ ШАГИ ===
+=== NEXT STEPS ===
 
-1. Убедитесь, что XAMPP запущен (Apache зелёный)
-2. Откройте http://localhost/demoversion_cooking/
-3. Протестируйте все функции (слайдер, фильтры, формы)
-4. Добавьте свой контент (текст, изображения)
-5. Разверните на реальный хостинг
+1. Make sure XAMPP is running (Apache green)
+2. Open http://localhost/demoversion_cooking/
+3. Test all functions (slider, filters, forms)
+4. Add your content (text, images)
+5. Deploy to real hosting
 
-=== ФУНКЦИИ ===
+=== FEATURES ===
 
-Главная страница:
-- Героический баннер
-- Автоматический слайдер (5 секунд)
-- Избранные рецепты
-- Категории блюд
-- Отзывы пользователей
+Home page:
+- Hero banner
+- Automatic slider (5 seconds)
+- Featured recipes
+- Dish categories
+- User reviews
 
-Страница рецептов:
-- Поиск в реальном времени
-- Фильтрация по категориям
-- 8+ рецептов
+Recipes page:
+- Real-time search
+- Filtering by categories
+- 8+ recipes
 
-Страница магазина:
-- Фильтрация товаров
-- Корзина (сохраняется в браузере)
-- Счетчик товаров
+Shop page:
+- Product filtering
+- Cart (saved in browser)
+- Item counter
 
-Все страницы:
-- Полное меню навигации
-- Мобильное меню (гамбургер)
-- Адаптивный дизайн
-- Footer со ссылками
+All pages:
+- Full navigation menu
+- Mobile menu (hamburger)
+- Responsive design
+- Footer with links
 
-=== БЫСТРЫЕ СОВЕТЫ ===
+=== QUICK TIPS ===
 
-Изменить цвет:
-- Откройте style.css
-- Найдите: --primary-color: #ff7043;
-- Замените на нужный цвет (например: #ff5722)
+Change color:
+- Open style.css
+- Find: --primary-color: #ff7043;
+- Replace with desired color (e.g.: #ff5722)
 
-Добавить рецепт:
-- Откройте recipes.html
-- Скопируйте последнюю карточку рецепта
-- Создайте новый файл recipe-название.html
+Add recipe:
+- Open recipes.html
+- Copy the last recipe card
+- Create new file recipe-name.html
 
-Добавить изображения:
-- Положите .jpg файлы в images/food/
-- Замените <div class="image">ФОТО</div> на:
-  <img src="images/food/имя.jpg" alt="Описание">
+Add images:
+- Put .jpg files in images/food/
+- Replace <div class="image">PHOTO</div> with:
+  <img src="images/food/name.jpg" alt="Description">
 
-=== ПОДДЕРЖКА ===
+=== SUPPORT ===
 
-Все файлы находятся в:
+All files are located in:
 c:\xampp\htdocs\demoversion_cooking\
 
-Начните с файла:
+Start with file:
 START_HERE.md
 
-=== ПРОЕКТ ГОТОВ! ===
+=== PROJECT READY! ===
 
-Веб-сайт полностью функционален и готов к использованию.
+The website is fully functional and ready for use.
 
-Спасибо за использование!
+Thank you for using!
 
 ---
 
-Версия: 1.0 Production Ready
-Статус: ЗАВЕРШЕНО И ГОТОВО
+Version: 1.0 Production Ready
+Status: COMPLETED AND READY
