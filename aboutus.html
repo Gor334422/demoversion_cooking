@@ -1,31 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Cooking</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Culinary Class – our story, mission, and team.">
+  <meta name="keywords" content="about us, culinary project, cooking school, recipes">
+  <title>About Us | Culinary Class</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div id="buttons" class="navbar">
-      <a href="recipes.html?home=true">
-      <button>Recipes</button>
-      </a>
-      <a href="courses.html?home=true">
-      <button>Courses</button>
-      </a>
-      <a href="shop.html?home=true">
-      <button>Shop</button>
-      </a>
-      <a href="aboutus.html?home=true">
-      <button>About us</button>
-      </a>
-      <a href="login.html?home=true">
-      <button id="login">Login</button>
-      </a>
-      <a href="signup.html?home=true">
-      <button id="signup">Sign Up</button>
-      </a>
+  <!-- HEADER & NAVIGATION -->
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="navbar-brand">🍳 Culinary Class</div>
+      <div class="nav-container">
+        <ul class="nav-menu">
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="aboutus.html" class="active">About Us</a></li>
+          <li><a href="login.html" class="btn-login">Sign In</a></li>
+        </ul>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <div class="hero-section">
+      <h1>About Culinary Class</h1>
+      <p>We are a community of food lovers helping you cook with confidence, one recipe at a time.</p>
+      <a href="recipes.html" class="btn btn-primary">Browse Recipes</a>
     </div>
+  </header>
+
+  <main>
+    <section class="about-section">
+      <div class="container">
+        <h2>Our Mission</h2>
+        <p>Our mission is to make cooking approachable and enjoyable for everyone. From traditional favorites to modern twists, we curate recipes that celebrate flavor, culture, and creativity.</p>
+
+        <h2>What We Offer</h2>
+        <ul>
+          <li><strong>Recipes:</strong> Step-by-step guides for every skill level.</li>
+          <li><strong>Courses:</strong> Learn from expert chefs with video lessons.</li>
+          <li><strong>Shop:</strong> Get quality ingredients and kitchen tools delivered.</li>
+        </ul>
+
+        <h2>Our Values</h2>
+        <p>We believe in freshness, simplicity, and community. That’s why we support home cooks with clear instructions, honest tips, and a friendly online cooking environment.</p>
+      </div>
+    </section>
+
+    <section class="team-section" style="background: #fff; padding: 4rem 0;">
+      <div class="container">
+        <h2>Meet The Team</h2>
+        <div class="categories-grid">
+          <div class="feature-card">
+            <div class="feature-icon">👩‍🍳</div>
+            <h3>Anna</h3>
+            <p>Lead recipe developer and food stylist. She makes every dish look and taste amazing.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎥</div>
+            <h3>Arman</h3>
+            <p>Course producer and videographer. He brings our cooking lessons to life.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🛒</div>
+            <h3>Zohrab</h3>
+            <p>Ingredient specialist. He sources the best products for our shop.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">💬</div>
+            <h3>Maria</h3>
+            <p>Community manager. She answers questions and keeps our kitchen family connected.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <h2>Ready to Cook Something New?</h2>
+      <p>Join thousands of home cooks and start exploring recipes, courses, and more.</p>
+      <div class="cta-buttons">
+        <a href="courses.html" class="btn btn-primary">View Courses</a>
+        <a href="signup.html" class="btn btn-secondary">Create Account</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>About</h4>
+        <ul>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="recipes.html">All Recipes</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="shop.html">Shop</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="#" class="social-icon">f</a>
+          <a href="#" class="social-icon">🐦</a>
+          <a href="#" class="social-icon">📷</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Culinary Class. All rights reserved.</p>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
